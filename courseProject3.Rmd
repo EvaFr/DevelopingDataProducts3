@@ -1,0 +1,17 @@
+---
+title: "CurseProject3"
+date: "1/15/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE,	warning = FALSE)
+library(plotly)
+```
+## Connetion between rhe temperature and the ozone level by month
+```{r data, echo = FALSE, message=FALSE, warning=FALSE,comment=FALSE,error=FALSE}
+data(airquality)
+plot_ly(airquality, x = ~ Temp, y = ~ Ozone,  color = ~ as.factor(Month), size = ~ Day, mode="markers")
+```
+
+
